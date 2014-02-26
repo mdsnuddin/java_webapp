@@ -3,3 +3,5 @@ build/
 .gradle/
 *iml
 out/
+
+// TODO: Add all ignore files before this push
