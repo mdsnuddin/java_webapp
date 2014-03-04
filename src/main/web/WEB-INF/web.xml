@@ -6,12 +6,12 @@
          version="3.0">
 
     <servlet>
-        <servlet-name>DummyServlet</servlet-name>
-        <servlet-class>servlet.dummy.DummyServlet</servlet-class>
+        <servlet-name>Initializer</servlet-name>
+        <servlet-class>servlet.service.Initialize</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DummyServlet</servlet-name>
-        <url-pattern>/DummyServlet</url-pattern>
+        <servlet-name>Initializer</servlet-name>
+        <url-pattern>/Initializer</url-pattern>
     </servlet-mapping>
 
 </web-app>
