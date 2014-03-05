@@ -4,7 +4,7 @@ package dao;
 
 import dao.entities.User;
 
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +23,9 @@ public class UserDao extends AbstractDao implements Dao {
             while (resultSet.next()) {
                 String user_id = resultSet.getString("user_id");
                 String user_name = resultSet.getString("user_name");
+                String user_password = resultSet.getString("user_password");
 
-                users.add(indexCount, new User(Integer.parseInt(user_id), user_name));
+                users.add(indexCount, new User(Integer.parseInt(user_id), user_name, user_password));
                 indexCount++;
             }
 
@@ -61,8 +62,10 @@ public class UserDao extends AbstractDao implements Dao {
         try {
             connect.setAutoCommit(true);
 
-            preparedStatement = connect.prepareStatement("insert into users (user_name) values (?)");
+            preparedStatement = connect.prepareStatement("insert into users (user_name, user_password) values (?)(?)");
+            // TODO: Check if the below statement works
             preparedStatement.setString(1, dbData[0]);
+            preparedStatement.setString(2, dbData[1]);
 
             preparedStatement.executeUpdate();
 

@@ -31,8 +31,10 @@ public class AbstractDao {
         while (resultSet.next()) {
             String user_id = resultSet.getString("user_id");
             String user_name = resultSet.getString("user_name");
+            String user_password = resultSet.getString("user_password");
             System.out.println("user_id: " + user_id);
             System.out.println("user_name: " + user_name);
+            System.out.println("user_password: " + user_password);
         }
     }
 

@@ -2,27 +2,37 @@ package dao.entities;
 
 public class User extends Entities{
 
-    private int user_id;
-    private String user_name;
+    private int userId;
+    private String userName;
+    private String userPassword;
 
-    public User(int user_id, String user_name) {
-        this.user_id = user_id;
-        this.user_name = user_name;
+    public User(int userId, String userName, String userPassword) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userPassword = userPassword;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return userPassword;
+    }
+
+    public void setPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }

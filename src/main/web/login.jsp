@@ -5,9 +5,9 @@
 </head>
 <body>
 
-<p>Welcome <%= request.getAttribute("currentUser") %></p>
+<% if (request.getAttribute("isUserLoggedIn").equals("false")) {%>
 
-<form name="loginForm" method="#">
+<form name="loginForm" method="post" action="/Login">
 <table>
     <tr>
         <td>User Name</td>
@@ -23,6 +23,10 @@
     </tr>
 </table>
 </form>
+
+<% } else {%>
+<p>You are already logged in.</p>
+<%}%>
 
 </body>
 </html>

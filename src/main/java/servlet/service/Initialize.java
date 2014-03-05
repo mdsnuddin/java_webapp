@@ -14,7 +14,8 @@ public class Initialize extends HttpServlet {
         response.setContentType("text/html");
 
         request.setAttribute("currentPage", "login.jsp");
-        request.setAttribute("currentUser", "Guest");
+        request.setAttribute("currentUserName", "Guest");
+        request.setAttribute("isUserLoggedIn", "false");
 
         getServletContext().getRequestDispatcher("/" + request.getAttribute("currentPage")).forward(request, response);
     }
