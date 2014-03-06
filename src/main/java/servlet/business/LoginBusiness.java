@@ -1,7 +1,7 @@
 package servlet.business;
 
-import dao.UserDao;
 import dao.entities.User;
+import dao.entitiesDb.UserDao;
 
 import java.util.List;
 

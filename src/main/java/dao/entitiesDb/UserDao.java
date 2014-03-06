@@ -1,7 +1,9 @@
 // TODO: Complete the DAO implementation in this class
 
-package dao;
+package dao.entitiesDb;
 
+import dao.Dao;
+import dao.db.AbstractDao;
 import dao.entities.User;
 
 import java.sql.SQLException;

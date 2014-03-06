@@ -1,4 +1,4 @@
-package dao;
+package dao.db;
 
 import java.sql.*;
 
@@ -9,7 +9,7 @@ public class AbstractDao {
     public PreparedStatement preparedStatement = null;
     public ResultSet resultSet = null;
 
-    public void connectToDatabase() throws Exception {
+    public Connection connectToDatabase() throws Exception {
         try {
         Class.forName("com.mysql.jdbc.Driver");
         connect = DriverManager
@@ -17,6 +17,8 @@ public class AbstractDao {
         }catch (Exception e) {
             throw e;
         }
+
+        return connect;
     }
 
     private void writeMetaData(ResultSet resultSet) throws SQLException {

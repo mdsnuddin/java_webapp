@@ -1,6 +1,6 @@
 package web.builder;
 
-import dao.UserDao;
+import dao.entitiesDb.UserDao;
 
 public class UserBuilder {
 

@@ -12,7 +12,6 @@ The focus of this project is to write a basic web app with the following functio
 - App runs off a local database
 - Use builder to help persist data to local database as means of setting up test data
 - Write tests on all levels i.e. unit, integration and full stack
--
 
 Technology used
 ---------------

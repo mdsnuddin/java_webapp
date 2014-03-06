@@ -24,6 +24,9 @@
 </table>
 </form>
 
+<br>
+<p>If you don't have an account then why not <a href="register.jsp">register</a> an account</p>
+
 <% } else {%>
 <p>You are already logged in.</p>
 <%}%>

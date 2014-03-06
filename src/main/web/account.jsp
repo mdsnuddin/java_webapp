@@ -8,7 +8,7 @@
 <% if (request.getAttribute("isUserLoggedIn").equals("true")) {%>
 <p>Welcome <%= request.getAttribute("currentUserName") %> </p>
 <% } else {%>
-<p>Sorry, your username and / or password was not recognised. Please try <a href="login.jsp">logging in again.</a></p>
+<p>Sorry, your username and / or password was not recognised or registered. Please try <a href="login.jsp">logging in again</a> or <a href="register.jsp">registering</a>.</p>
 <%}%>
 
 </body>
