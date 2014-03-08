@@ -21,12 +21,25 @@ Technology used
 - SQL
 - JDBC:MySQL
 - WebDriver
+- Gradle
 
 Methodologies
 -------------
 - MVC Model
 - Singleton Pattern
 - Data Access Object
+
+Installation / Run Instructions
+-------------------------
+1. Clone the project
+2. Import the project as a Gradle project using build.gradle using your IDE
+3. Run gradle build (can use the wrapper if you like) using gitbash
+4. Grab the jar file generate in build/lib
+5. Copy the jar file into your tomcat/webapp directory
+6. Go to locahost:8080
+7. Select manager app
+8. Select Webapp
+9. You will need a local installtion of mysql database named tstdb
 
 Outstanding tasks
 -----------------
