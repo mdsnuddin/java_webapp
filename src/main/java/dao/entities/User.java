@@ -1,6 +1,6 @@
 package dao.entities;
 
-public class User extends Entities{
+public class User {
 
     private int userId;
     private String userName;

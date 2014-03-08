@@ -39,7 +39,7 @@ Installation / Run Instructions
 6. Go to locahost:8080
 7. Select manager app
 8. Select Webapp
-9. You will need a local installtion of mysql database named tstdb
+9. You will need a local installation of mysql database named tstdb
 
 Outstanding tasks
 -----------------

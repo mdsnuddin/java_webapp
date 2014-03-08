@@ -1,6 +1,6 @@
 package web.builder;
 
-import dao.entitiesDb.UserDao;
+import dao.entitiesDb.EntityDaoCommon;
 
 public class UserBuilder {
 
@@ -18,9 +18,9 @@ public class UserBuilder {
 
     public UserBuilder build() {
         try {
-            UserDao userDao = new UserDao();
-            userDao.connectToDatabase();
-            userDao.add(getName());
+            EntityDaoCommon entityDao = new EntityDaoCommon();
+            entityDao.connectToDatabase();
+            entityDao.addUser(getName());
         } catch (Exception e) {
             e.printStackTrace();
         }

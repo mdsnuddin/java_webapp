@@ -21,10 +21,8 @@ public class RegistrationController extends HttpServlet {
         userName = request.getParameter("userNameRegisterInput");
         password = request.getParameter("passwordRegisterInput");
 
-        boolean registerStatus = false;
-
         try {
-            registerStatus = RegistrationBusiness.validateRegistration(userName, password);
+            boolean registerStatus = RegistrationBusiness.validateRegistration(userName, password);
 
             if (registerStatus) {
                 request.setAttribute("isUserLoggedIn", "true");
@@ -32,7 +30,6 @@ public class RegistrationController extends HttpServlet {
             } else {
                 request.setAttribute("isUserLoggedIn", "false");
             }
-
             getServletContext().getRequestDispatcher("/" + request.getAttribute("currentPage")).forward(request, response);
 
         } catch (Exception e) {

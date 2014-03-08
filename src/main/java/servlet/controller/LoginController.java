@@ -25,10 +25,8 @@ public class LoginController extends HttpServlet {
         userName = request.getParameter("userNameLoginInput");
         password = request.getParameter("passwordLoginInput");
 
-        boolean loginStatus = false;
-
         try {
-            loginStatus = LoginBusiness.validCredentials(userName, password);
+            boolean loginStatus = LoginBusiness.validCredentials(userName, password);
 
             if (loginStatus) {
                 request.setAttribute("isUserLoggedIn", "true");
