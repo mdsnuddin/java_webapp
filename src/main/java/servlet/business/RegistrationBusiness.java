@@ -1,14 +1,14 @@
 package servlet.business;
 
 import dao.entities.User;
-import dao.entitiesDb.EntityDaoCommon;
+import dao.entitiesDb.EntityUserDao;
 
 import java.util.List;
 
 public class RegistrationBusiness {
 
     public static boolean validateRegistration(String userName, String password) {
-        EntityDaoCommon entityDao = new EntityDaoCommon();
+        EntityUserDao entityDao = new EntityUserDao();
 
         try {
             entityDao.connectToDatabase();

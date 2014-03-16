@@ -11,15 +11,15 @@
 <table>
     <tr>
         <td>User Name</td>
-        <td><input type="text" name="userNameLoginInput"/></td>
+        <td><input id="username" type="text" name="userNameLoginInput"/></td>
     </tr>
     <tr>
         <td>Password</td>
-        <td><input type="text" name="passwordLoginInput"/></td>
+        <td><input id="password" type="text" name="passwordLoginInput"/></td>
     </tr>
     <tr>
         <td></td>
-        <td><input type="submit" name="loginSubmit"/></td>
+        <td><input id="submit" type="submit" name="loginSubmit"/></td>
     </tr>
 </table>
 </form>

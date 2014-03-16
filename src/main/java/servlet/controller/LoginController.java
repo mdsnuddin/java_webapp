@@ -13,10 +13,6 @@ public class LoginController extends HttpServlet {
     private String userName;
     private String password;
 
-    // TODO: Navigating back from the account page to the login page throws an null pointer error
-
-    // TODO Need to implement a controller to register a new account
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("LoginController class called");
 

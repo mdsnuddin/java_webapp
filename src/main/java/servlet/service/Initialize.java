@@ -14,7 +14,6 @@ public class Initialize extends HttpServlet {
         System.out.println("Initialize class called");
 
         StartUpScripts.updateDB();
-
         response.setContentType("text/html");
 
         request.setAttribute("currentPage", "login.jsp");

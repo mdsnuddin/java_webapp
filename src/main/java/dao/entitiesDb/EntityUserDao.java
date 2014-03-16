@@ -1,8 +1,6 @@
-// TODO: Complete the DAO implementation in this class
-
 package dao.entitiesDb;
 
-import dao.DaoCommon;
+import dao.UserDao;
 import dao.db.AbstractDao;
 import dao.db.DoaController;
 import dao.entities.User;
@@ -12,9 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EntityDaoCommon extends AbstractDao implements DaoCommon {
+public class EntityUserDao extends AbstractDao implements UserDao {
 
-    // TODO: below method needs to take into account other types of entities
     @Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<User>();
@@ -40,13 +37,13 @@ public class EntityDaoCommon extends AbstractDao implements DaoCommon {
     }
 
     @Override
-    public DaoCommon update() {
+    public UserDao updateUser() {
         // TODO: complete this method
         return null;
     }
 
     @Override
-    public void delete(String ...dbData) {
+    public void deleteUser(String... dbData) {
         try {
             connect.setAutoCommit(true);
             preparedStatement = connect.prepareStatement("delete from users where user_name = (?)");
@@ -61,12 +58,10 @@ public class EntityDaoCommon extends AbstractDao implements DaoCommon {
     @Override
     public void addUser(String... dbData) {
         try {
-            // TODO: Check if the below statement works
             AbstractDao dao = new DoaController();
             connect = dao.connectToDatabase();
             connect.setAutoCommit(true);
 
-            // TODO: Make statement below a little more robust
             String query = "insert into users (user_name, user_password) \n" +
                     "values ('" + dbData[0] + "', '" + dbData[1] + "')";
 

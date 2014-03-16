@@ -1,7 +1,7 @@
 package servlet.business;
 
 import dao.entities.User;
-import dao.entitiesDb.EntityDaoCommon;
+import dao.entitiesDb.EntityUserDao;
 
 import java.util.List;
 
@@ -9,8 +9,7 @@ public class LoginBusiness {
 
     public static boolean validCredentials(String userName, String password) throws Exception {
         if (userName.length() >= 1 && password.length() >= 1) {
-
-            EntityDaoCommon entityDao = new EntityDaoCommon();
+            EntityUserDao entityDao = new EntityUserDao();
             entityDao.connectToDatabase();
             List<User> allUsers = entityDao.getAllUsers();
 

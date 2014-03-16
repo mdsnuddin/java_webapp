@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1><a href="Initializer">Click here to go to WEB-APP</a></h1>
+<h1><a id="id_login" href="Initializer">Click here to go to WEB-APP</a></h1>
 
 </body>
 </html>

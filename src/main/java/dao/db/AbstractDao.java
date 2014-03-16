@@ -11,13 +11,12 @@ public class AbstractDao {
 
     public Connection connectToDatabase() throws Exception {
         try {
-        Class.forName("com.mysql.jdbc.Driver");
-        connect = DriverManager
-                .getConnection("jdbc:mysql://localhost/tstdb?user=root&password=root");
-        }catch (Exception e) {
+            Class.forName("com.mysql.jdbc.Driver");
+            connect = DriverManager
+                    .getConnection("jdbc:mysql://localhost/tstdb?user=root&password=root");
+        } catch (Exception e) {
             throw e;
         }
-
         return connect;
     }
 }
