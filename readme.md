@@ -3,10 +3,10 @@ Proto-type Web App By Mohammed S Uddin
 
 Description
 -----------
-To create a Java web app and build a web driver test framework to support it.
-This is a prototype project and as a result has many gaps. The focus here is
-not to complete it but to simply write a project with the focal aim of learning
-how these technologies work.
+The purpose of this project is to build a 'proof of concept' for a Java Web Application using the MVC pattern, supported by a back end database.
+The secondary focus is to add a test framework around the application using a build tool. The test framework will consist of Web Driver tests.
+Once a solid concept has been established with examples this project will be abandoned to build more specific and detailed examples. Any
+outstanding issues at the end of the project will not be fixed as the focus here is to build understanding, not a working application.
 
 Purpose
 -------
